@@ -1,0 +1,48 @@
+2020-06-07 14:08:42,350 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-07 14:08:42,361 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26df6e3a] was not registered for synchronization because synchronization is not active
+2020-06-07 14:08:42,842 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-07 14:08:42,849 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==>  Preparing: insert into user(username, password, telephone, address) value (?,?,?,?) 
+2020-06-07 14:08:42,876 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==> Parameters: Uqewq(String), qqq123(String), 12221434(String), 长江路123号(String)
+2020-06-07 14:08:42,938 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - <==    Updates: 1
+2020-06-07 14:08:42,939 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26df6e3a]
+2020-06-07 14:22:02,930 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-07 14:22:02,936 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26df6e3a] was not registered for synchronization because synchronization is not active
+2020-06-07 14:22:03,294 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-07 14:22:03,300 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==>  Preparing: insert into user(username, password, telephone, address) value (?,?,?,?) 
+2020-06-07 14:22:03,324 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==> Parameters: 王芳(String), wang123(String), 1882319902(String), 长江路123号(String)
+2020-06-07 14:22:03,337 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - <==    Updates: 1
+2020-06-07 14:22:03,338 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26df6e3a]
+2020-06-07 16:00:27,600 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-07 16:00:27,608 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d9caaeb] was not registered for synchronization because synchronization is not active
+2020-06-07 16:00:28,208 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-07 16:00:28,214 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==>  Preparing: insert into user(username, password, telephone, address) value (?,?,?,?) 
+2020-06-07 16:00:28,239 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==> Parameters: 王芳(String), wang123(String), 1882319902(String), 长江路123号(String)
+2020-06-07 16:00:28,284 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - <==    Updates: 1
+2020-06-07 16:00:28,285 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d9caaeb]
+2020-06-07 16:06:55,012 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-07 16:06:55,019 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e] was not registered for synchronization because synchronization is not active
+2020-06-07 16:06:55,391 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-07 16:06:55,398 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==>  Preparing: insert into user(username, password, telephone, address) value (?,?,?,?) 
+2020-06-07 16:06:55,422 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==> Parameters: 王芳(String), wang123(String), 1882319902(String), 长江路123号(String)
+2020-06-07 16:06:55,437 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - <==    Updates: 1
+2020-06-07 16:06:55,438 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e]
+2020-06-07 17:28:50,836 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-07 17:28:50,849 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e] was not registered for synchronization because synchronization is not active
+2020-06-07 17:28:50,852 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e]
+2020-06-07 17:29:16,918 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-07 17:29:16,929 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e] was not registered for synchronization because synchronization is not active
+2020-06-07 17:29:16,932 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e]
+2020-06-07 17:29:54,140 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-07 17:29:54,150 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e] was not registered for synchronization because synchronization is not active
+2020-06-07 17:29:54,706 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-07 17:29:54,720 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.findUser] [DEBUG] - ==>  Preparing: select * from user where username = ? and password = ? 
+2020-06-07 17:29:54,769 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.findUser] [DEBUG] - ==> Parameters: 王芳(String), wang123(String)
+2020-06-07 17:29:54,807 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.findUser] [DEBUG] - <==      Total: 3
+2020-06-07 17:29:54,814 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e]
+2020-06-07 22:40:30,461 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-07 22:40:30,476 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b520ea8] was not registered for synchronization because synchronization is not active
+2020-06-07 22:40:30,862 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-07 22:40:30,870 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==>  Preparing: insert into user(username, password, telephone, address) value (?,?,?,?) 
+2020-06-07 22:40:30,897 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - ==> Parameters: 王芳(String), wang123(String), 1882319902(String), 长江路123号(String)
+2020-06-07 22:40:30,931 [main] [cn.edu.usts.cs2018.dao.mapper.UserMapper.add] [DEBUG] - <==    Updates: 1
+2020-06-07 22:40:30,932 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b520ea8]

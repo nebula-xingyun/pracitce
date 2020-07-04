@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 将空间改为接口中的全类名-->
+<mapper namespace="cn.edu.usts.cs2018.dao.mapper.ActivityMapper">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="actMap" type="cn.edu.usts.cs2018.entity.Activity">
+        <id property="activityid" column="activityid" javaType="java.lang.Integer"></id>
+        <result property="userid" column="userid" javaType="java.lang.Integer"></result>
+        <result property="username" column="username" javaType="java.lang.String"></result>
+        <result property="activityname" column="activityname" javaType="java.lang.String"></result>
+        <result property="activityplace" column="activityplace" javaType="java.lang.String"></result>
+        <result property="start_time" column="start_time" javaType="java.lang.String"></result>
+        <result property="end_time" column="end_time" javaType="java.lang.String"></result>
+        <result property="general_budget" column="general_budget" javaType="java.lang.Float"></result>
+        <result property="description" column="description" javaType="java.lang.String"></result>
+        <result property="min_member" column="min_member" javaType="java.lang.Integer"></result>
+        <result property="max_member" column="max_member" javaType="java.lang.Integer"></result>
+        <result property="create_time" column="create_time" javaType="java.lang.String"></result>
+        <result property="status" column="status" javaType="java.lang.String"></result>
+
+    </resultMap>
+
+    <!-- 在各种标签中的id属性必须和接口中的方法名相同 ， id属性值必须是唯一的，不能够重复使用。
+    parameterType属性指明查询时使用的参数类型，resultType属性指明查询返回的结果集类型-->
+    <!-- useGeneratedKeys:(仅 对 insert 有用) 告诉 MyBatis 使 用 JDBC 的getGeneratedKeys
+      方法来取出由数据（比如：像 MySQL 和 SQLServer 这样的数据库管理系统的自动递增字段）内部生成的主键。默认值： false。 -->
+    <!--keyProperty:(仅对 insert有用)标记一个属性， MyBatis 会通过 getGeneratedKeys或者通过 insert 语句的 selectKey 子元素设置它的值。默认：不设置。 -->
+    <!--#{}中的内容，为占位符，当参数为某个JavaBean时，表示放置该Bean对象的属性值  -->
+
+    <!-- 将以下ID改为接口中的方法名-->
+    <!--查询-->
+    <select id="selectByActivityname"  parameterType="String"  resultMap="actMap" >
+        select * from activity where activityname = #{activityname}
+    </select>
+
+    <select id="selectByActicityid"  resultMap="actMap">
+        select * from activity where activityid = #{activityid}
+    </select>
+
+    <!-- 查询2-->
+    <select id="findAll" resultMap="actMap">
+        select * from activity
+    </select>
+
+    <!--&lt;!&ndash; 查询3&ndash;&gt;-->
+    <!--<select id="find" resultMap="userMap">-->
+    <!--select * from users where age = #{strWhere}-->
+    <!--</select>-->
+
+    <!--插入-->
+    <insert id="insert" parameterType="cn.edu.usts.cs2018.entity.Activity" keyProperty="id">
+        insert into activity(activityid,userid,username,activityname, activityplace,start_time,end_time,general_budget,description,min_member,max_member,create_time,status)
+            value (#{activityid},#{userid},#{username},#{activityname}, #{activityplace},#{start_time},#{end_time},#{general_budget},#{description},#{min_member},#{max_member},#{create_time},#{status})
+    </insert>
+
+    <!--更新-->
+    <update id="update" parameterType="cn.edu.usts.cs2018.entity.Book">
+        update activity
+        set userid=#{userid},username=#{username},activityname=#{activityname},activityplace=#{activityplace},start_time = #{start_time},end_time=#{end_time},general_budget=#{general_budget},description=#{description},min_member=#{min_member},max_member=#{max_member},create_time=#{create_time},status=#{status}
+        where activityid=#{activityid}
+    </update>
+
+    <!-- 删除-->
+    <delete id="delete">
+        delete from activity where activityid=#{activityid}
+    </delete>
+
+
+</mapper>

@@ -1,0 +1,42 @@
+2020-06-08 10:49:44,297 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-08 10:49:44,311 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e] was not registered for synchronization because synchronization is not active
+2020-06-08 10:49:44,663 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-08 10:49:44,669 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.add] [DEBUG] - ==>  Preparing: insert into expenditure(activityid,userid,username,pay,pay_activity) value (?,?,?,?,?) 
+2020-06-08 10:49:44,692 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.add] [DEBUG] - ==> Parameters: 1222(Integer), 1200101(Integer), 王芳(String), 120.0(Float), 222(String)
+2020-06-08 10:49:44,705 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.add] [DEBUG] - <==    Updates: 1
+2020-06-08 10:49:44,706 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@782859e]
+2020-06-08 15:18:33,957 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-08 15:18:33,966 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44a59da3] was not registered for synchronization because synchronization is not active
+2020-06-08 15:18:34,577 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-08 15:18:34,588 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findActivity] [DEBUG] - ==>  Preparing: select * from expenditure where activityid=? 
+2020-06-08 15:18:34,627 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findActivity] [DEBUG] - ==> Parameters: 1001(Integer)
+2020-06-08 15:18:34,655 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findActivity] [DEBUG] - <==      Total: 1
+2020-06-08 15:18:34,659 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44a59da3]
+2020-06-08 15:18:34,660 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-08 15:18:34,666 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fb669c3] was not registered for synchronization because synchronization is not active
+2020-06-08 15:18:34,667 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-08 15:18:34,667 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findSelf] [DEBUG] - ==>  Preparing: select * from expenditure where userid = ? 
+2020-06-08 15:18:34,667 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findSelf] [DEBUG] - ==> Parameters: 1200101(Integer)
+2020-06-08 15:18:34,669 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findSelf] [DEBUG] - <==      Total: 2
+2020-06-08 15:18:34,669 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fb669c3]
+2020-06-08 15:22:37,417 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-08 15:22:37,424 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44a59da3] was not registered for synchronization because synchronization is not active
+2020-06-08 15:22:37,973 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-08 15:22:37,982 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findActivity] [DEBUG] - ==>  Preparing: select * from expenditure where activityid=? 
+2020-06-08 15:22:38,020 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findActivity] [DEBUG] - ==> Parameters: 1001(Integer)
+2020-06-08 15:22:38,041 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findActivity] [DEBUG] - <==      Total: 1
+2020-06-08 15:22:38,048 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44a59da3]
+2020-06-08 15:22:38,049 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-08 15:22:38,056 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fb669c3] was not registered for synchronization because synchronization is not active
+2020-06-08 15:22:38,057 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-08 15:22:38,058 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findSelf] [DEBUG] - ==>  Preparing: select * from expenditure where userid = ? 
+2020-06-08 15:22:38,059 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findSelf] [DEBUG] - ==> Parameters: 1200101(Integer)
+2020-06-08 15:22:38,060 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.findSelf] [DEBUG] - <==      Total: 2
+2020-06-08 15:22:38,061 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1fb669c3]
+2020-06-08 15:22:38,062 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-06-08 15:22:38,062 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e6104fc] was not registered for synchronization because synchronization is not active
+2020-06-08 15:22:38,063 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/experiment?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-06-08 15:22:38,063 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.getUserById] [DEBUG] - ==>  Preparing: select * from expenditure where userid = ? 
+2020-06-08 15:22:38,064 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.getUserById] [DEBUG] - ==> Parameters: 1200101(Integer)
+2020-06-08 15:22:38,067 [main] [cn.edu.usts.cs2018.dao.mapper.PayMapper.getUserById] [DEBUG] - <==      Total: 2
+2020-06-08 15:22:38,069 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e6104fc]

@@ -1,0 +1,357 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    font-weight: bold;
+}
+#main{
+    width: 100%;
+    height: 100%;
+}
+.btn{
+    border: none;
+    padding: 3px 15px ;
+    font-size: 15px;
+    font-weight: bold;
+}
+.btn-blue{
+    color: white;
+    background-color: #359ee8;
+}
+.btn-blue:hover{
+    cursor: pointer;
+    background-color: #dbd6d687;
+}
+.left{
+    float: left;
+}
+.clearfix{
+    zoom: 1;
+}
+.table {
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+.table tr:hover{
+    background: whitesmoke;
+}
+.table th{
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    background: #ccc;
+}
+
+.table td{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #cccccc;
+    font-size: 13px;
+}
+
+.text-center{
+    text-align: center;
+}
+.login{
+    width: 500px;
+    height: 340px;
+    background: #0077ca;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -170px;
+}
+.loginMain{
+    padding: 50px;
+    color: white;
+}
+.loginMain form ul li{
+    margin-top: 10px;
+}
+.loginMain ul span{
+    display: inline-block;
+    width: 102px;
+    height: 30px;
+    text-align: right;
+    font-size: 15px;
+}
+.loginMain ul li input[type="text"],.loginMain ul li input[type="password"]{
+    height: 25px;
+    width: 205px;
+    border-radius: initial;
+}
+.loginMain ul li input[name="verify"]{
+    width: 75px;
+}
+img[name="verifyImg"]{
+    margin-left: 50px;
+    height: 30px;
+    width: 79px;
+    float:right;
+    position: absolute;
+}
+.loginMain ul li input[name="submit"],.loginMain ul li input[name="reset"]{
+    width: 78px;
+    height: 30px;
+    background-color: #00608b;
+    margin: 0px -57px 0px 106px;
+    cursor: pointer;
+}
+.loginMain ul li input[name="submit"]:hover{
+    background-color: darkblue;
+}
+.loginMain ul li input[name="reset"]:hover{
+    background-color: darkblue;
+}
+#warmText{
+    display: block;
+    margin-left: 115px;
+    width: 200px;
+    text-align: center;
+}
+
+
+/*顶部导航*/
+
+.head{
+    width: 100%;
+    height: 50px;
+    background-color: #0077ca;
+    float: right;
+}
+
+
+.headLogo{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    float: left;
+}
+
+ul.headnav li{
+    width: 72px;
+    height: 50px;
+    line-height: 47px;
+    margin-right: 2px;
+    border: white;
+    float: left;
+    background-color: #00a2ca;
+
+}
+.head .headnav li.current-menu{
+    width: 120px;
+    background: #82a8ff;
+}
+ul.headnav li a{
+    text-align: center;
+    display: block;
+}
+ul.headnav li a:hover{
+
+    font-weight: bold;
+}
+#headnavRight li{
+    display: block;
+    float: left;
+    margin: 25px 2px 0px 6px;
+    background-color: #82a8ff;
+}
+#headnavRight li:first-child{
+    margin-left: 19%;
+}
+.leftMenu{
+    position: absolute;
+    top: 53px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+.leftMenu_1 dl{
+    background-color: #0077CA;
+    width: 150px;
+    cursor: pointer;
+}
+.leftMenu_1 dl dt{
+    width: 150px;
+    text-indent: 20px;
+    padding-top: 8px;
+    height: 30px;
+    font-weight: bold;
+    background: url(../img/toggle.png ) 120px 17px no-repeat;
+}
+.leftMenu_1 dl dd{
+    background-color: #d3e5ee;
+}
+
+.leftMenu_1 dl dd ul li{
+    height: 30px;
+    margin-left: 30px;
+
+}
+.leftMenu_1 dl dd ul li a{
+    width: 150px;
+    display: block;
+    background: #D3E5EE;
+    color: #00a2ca;
+}
+.leftMenu_1 dl dd ul li a:hover{
+    font-weight: bold;
+    border: 1px solid #00A2CA;
+}
+
+.rightMain{
+    position: absolute;
+    top: 50px;
+    left: 155px;
+    bottom: 0px;
+    right: 0px;
+   overflow: initial;
+    margin-top: 5px;
+}
+.rightContent{
+    height: 100%;
+
+}
+.rightContent iframe{
+    height: 100%;
+    width: 100%;
+}
+body.showLeftMenu .rightMain{
+    left: 155px;
+}
+body.hideLeftMenu .rightMain{
+    left: 0px;
+}
+.maincol-left{
+    float: left;
+}
+.maincol dl{
+    border:2px solid greenyellow;
+    margin-bottom: 5px;
+    width:430px;
+    background-color: #00a2ca;
+    text-align: left;
+    color: #d3e5ee;
+    padding-left: 10px;
+}
+.maincol-left dl:first-child{
+    background-color: #329be3;
+}
+.maincol dl dd{
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.maincol dl dt{
+    margin: 10px 0px;
+}
+.maincol-right{
+    float: right;
+}
+.maincol-right dl{
+    background-color: #54b834;
+}
+.pos{
+    height: 35px;
+    border-bottom: 2px solid #ccc;
+    padding-left: 20px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #0077CA;
+    font-weight: bold;
+}
+.operatr{
+    margin: 5px;
+    height: 25px;
+}
+.page{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+}
+.text-left{
+    text-align: left;
+}
+.tableWrap{
+    margin: 5px;
+}
+
+.title{
+    width: 100px;
+}
+.textarea-default{
+    width: 600px;
+    height: 90px;
+}
+.leftMenu_1 dl dd ul a.currentLeftMenu{
+    border-bottom: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    background-color: ghostwhite;
+}
+.optionsBar ul{
+
+}
+.optionsBar ul li{
+   border: 1px solid honeydew;
+    font-size: 15px;
+    background-color: #bebebe8f;
+    height: 20px;
+    display: inline-block;
+    margin-left: 8px;
+    margin-top: 10px;
+
+    padding: 2px;
+}
+.optionsBar ul li:hover{
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+.webItem{
+    display: none;
+}
+.webItem dl{
+    margin-top: 55px;
+    width: 100%;
+}
+.webItem dl dd{
+    display: block;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 14px;
+
+}
+.webItem dl dd input[type="text"],.webItem dl dd textarea{
+    margin-left: 100px;
+    width: 20%;
+}
+.webItem dl dd input{
+   position: relative;
+
+}
+input[type="button"]{
+    padding: 1px 8px;
+    background-color: #00a2ca;
+    border: 1px solid whitesmoke;
+    margin-left: 181px;
+}
+input[type="button"]:hover{
+    background-color: #D3E5EE;
+}
+.optionsBar ul li.currentWebItem{
+    background-color: white;
+}

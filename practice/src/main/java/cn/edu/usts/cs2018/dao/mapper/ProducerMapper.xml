@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 将空间改为接口中的全类名-->
+<mapper namespace="cn.edu.usts.cs2018.dao.mapper.ProducerMapper">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="producerMap" type="cn.edu.usts.cs2018.entity.Producer">
+        <id property="id" column="id" javaType="java.lang.Integer"></id>
+        <result property="workshopNo" column="workshopNo" javaType="java.lang.String"></result>
+        <result property="producerNo" column="producerNo" javaType="java.lang.Integer"></result>
+        <result property="status" column="status" javaType="java.lang.String"></result>
+    </resultMap>
+
+    <!--查询-->
+    <select id="getProducerById" parameterType="int" resultType="Producer">
+        select * from producer where id = #{id}
+    </select>
+
+    <select id="selectByNamePwd"  parameterType="String" resultType="Producer">
+        select * from producer where workshopNo = #{arg0} and producerNo = #{arg1}
+    </select>
+
+    <!-- 查询2-->
+    <select id="selectAll" resultMap="producerMap">
+        select * from producer
+    </select>
+
+
+    <!--插入-->
+    <insert id="add" parameterType="cn.edu.usts.cs2018.entity.Worker" keyProperty="id">
+        insert into producer(workshopNo, producerNo, status)
+            value (#{workshopNo},#{producerNo},#{status})
+    </insert>
+
+    <!--更新-->
+    <update id="update_producer" parameterType="cn.edu.usts.cs2018.entity.Worker">
+        update producer
+        set workshopNo=#{workshopNo},producerNo=#{producerNo},status=#{status}
+        where id=#{id}
+    </update>
+
+    <!-- 删除-->
+    <delete id="deleteById">
+        delete from producer where id=#{id}
+    </delete>
+
+</mapper>

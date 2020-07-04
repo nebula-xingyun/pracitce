@@ -1,0 +1,7 @@
+2020-07-02 21:29:36,671 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Creating a new SqlSession
+2020-07-02 21:29:36,697 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@626abbd0] was not registered for synchronization because synchronization is not active
+2020-07-02 21:29:37,227 [main] [org.mybatis.spring.transaction.SpringManagedTransaction] [DEBUG] - JDBC Connection [jdbc:mysql://localhost:3306/treat?useUnicode=true&characterEncoding=UTF-8&useSSL=false, UserName=root@localhost, MySQL Connector Java] will not be managed by Spring
+2020-07-02 21:29:37,233 [main] [cn.edu.usts.cs2018.dao.mapper.WorkerMapper.update] [DEBUG] - ==>  Preparing: update worker set name=?,password=?,telephone=?,work_count=? where number=? 
+2020-07-02 21:29:37,256 [main] [cn.edu.usts.cs2018.dao.mapper.WorkerMapper.update] [DEBUG] - ==> Parameters: 小明(String), ming123(String), 122(String), 1(String), 1202(String)
+2020-07-02 21:29:37,345 [main] [cn.edu.usts.cs2018.dao.mapper.WorkerMapper.update] [DEBUG] - <==    Updates: 1
+2020-07-02 21:29:37,347 [main] [org.mybatis.spring.SqlSessionUtils] [DEBUG] - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@626abbd0]

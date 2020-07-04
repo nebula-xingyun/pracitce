@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 将空间改为接口中的全类名-->
+<mapper namespace="cn.edu.usts.cs2018.dao.mapper.PayMapper">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="payMap" type="cn.edu.usts.cs2018.entity.UserActivity">
+        <id property="activityid" column="activityid" javaType="java.lang.Integer"></id>
+        <result property="userid" column="userid" javaType="java.lang.Integer"></result>
+        <result property="username" column="username" javaType="java.lang.String"></result>
+        <result property="pay" column="pay" javaType="java.lang.Float"></result>
+        <result property="pay_activity" column="pay_activity" javaType="java.lang.String"></result>
+    </resultMap>
+    <!--查询-->
+    <select id="getUserById" parameterType="int" resultType="UserActivity">
+        select * from expenditure where userid = #{userid}
+    </select>
+
+
+    <!-- 查询2-->
+    <select id="selectAll" resultMap="payMap">
+        select * from expenditure
+    </select>
+
+
+    <!-- 查询2-->
+    <select id="findSelf" parameterType="int" resultMap="payMap">
+        select * from expenditure where userid = #{userid}
+    </select>
+
+    <!-- 查询2-->
+    <select id="findActivity" parameterType="int" resultMap="payMap">
+        select * from expenditure where activityid=#{activityid}
+    </select>
+
+    <!--插入-->
+    <insert id="add" parameterType="cn.edu.usts.cs2018.entity.UserActivity" keyProperty="userid">
+        insert into expenditure(activityid,userid,username,pay,pay_activity)
+        value (#{activityid},#{userid},#{username},#{pay},#{pay_activity})
+    </insert>
+
+    <!--&lt;!&ndash;更新&ndash;&gt;-->
+    <!--<update id="update" parameterType="cn.edu.usts.cs2018.entity.UserActivity">-->
+        <!--update user-->
+        <!--set username=#{username},password=#{password},telephone=#{telephone},address=#{address}-->
+        <!--where userid=#{userid}-->
+    <!--</update>-->
+
+    <!-- 删除-->
+    <delete id="deleteById">
+        delete from expenditure where activityid=#{activityid}
+    </delete>
+
+
+</mapper>

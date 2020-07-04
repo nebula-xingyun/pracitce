@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 将空间改为接口中的全类名-->
+<mapper namespace="cn.edu.usts.cs2018.dao.mapper.WorkerMapper">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="workerMap" type="cn.edu.usts.cs2018.entity.Worker">
+        <id property="id" column="id" javaType="java.lang.Integer"></id>
+        <result property="number" column="number" javaType="java.lang.String"></result>
+        <result property="name" column="name" javaType="java.lang.String"></result>
+        <result property="password" column="password" javaType="java.lang.String"></result>
+        <result property="telephone" column="telephone" javaType="java.lang.Integer"></result>
+        <result property="work_count" column="work_count" javaType="java.lang.String"></result>
+    </resultMap>
+
+    <!--查询-->
+    <select id="getWorkById" parameterType="int" resultType="Worker">
+        select * from worker where id = #{id}
+    </select>
+
+    <select id="selectByNamePwd"  parameterType="String" resultType="Worker">
+        select * from worker where name = #{arg0} and password = #{arg1}
+    </select>
+
+    <!-- 查询2-->
+    <select id="selectAll" resultMap="workerMap">
+        select * from worker
+    </select>
+
+    <!-- 查询3-->
+    <select id="select" resultMap="workerMap">
+        select * from worker where telephone = #{strWhere}
+    </select>
+
+    <!--插入-->
+    <insert id="add" parameterType="cn.edu.usts.cs2018.entity.Worker" keyProperty="id">
+        insert into worker(number,name,password,telephone,work_count)
+            value (#{number},#{name},#{password},#{telephone},#{work_count})
+    </insert>
+
+    <!--更新-->
+    <update id="update" parameterType="cn.edu.usts.cs2018.entity.Worker">
+        update worker
+        set name=#{name},password=#{password},telephone=#{telephone},work_count=#{work_count}
+        where number=#{number}
+    </update>
+
+    <!-- 删除-->
+    <delete id="deleteById">
+        delete from worker where number=#{number}
+    </delete>
+
+    <!--动态SQL用法示例-->
+    <select id="searchWorker"  parameterType="String" resultMap="workerMap">
+        SELECT * FROM worker WHERE 1=1
+        <!--         1.　if的用法 -->
+        <!--                AND  custname LIKE '%' #{custname} '%'-->
+        <!--
+                    <if test="custname != null and custname!=''">
+                            AND  custname LIKE  concat('%', #{custname}, '%')
+                    </if>
+                    <if test="address != null and address!=''">
+                          AND  address LIKE '%' #{address} '%'
+                    </if>
+                    <if test="address > 0">
+                          AND  age =#{address}
+                    </if>
+        -->
+        <!-- 2 choose 用法-->
+        <choose>
+            <when test="name != null and name!=''">
+                AND  name LIKE  concat('%', #{name}, '%')
+            </when>
+            <when test="name != null and name!=''">
+                AND  name LIKE  concat('%', #{name}, '%')
+            </when>
+            <otherwise >
+                AND  telephone  is not null
+            </otherwise>
+        </choose>
+
+    </select>
+</mapper>

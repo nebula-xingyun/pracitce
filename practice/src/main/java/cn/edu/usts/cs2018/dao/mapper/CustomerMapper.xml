@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 将空间改为接口中的全类名-->
+<mapper namespace="cn.edu.usts.cs2018.dao.mapper.CustomerMapper">
+
+    <!-- 自定义返回结果集 -->
+    <resultMap id="customerMap" type="cn.edu.usts.cs2018.entity.Customer">
+        <id property="id" column="id" javaType="java.lang.Integer"></id>
+        <result property="custname" column="custname" javaType="java.lang.String"></result>
+        <result property="pwd" column="pwd" javaType="java.lang.String"></result>
+        <result property="age" column="age" javaType="java.lang.Integer"></result>
+        <result property="address" column="address" javaType="java.lang.String"></result>
+    </resultMap>
+
+    <!-- 在各种标签中的id属性必须和接口中的方法名相同 ， id属性值必须是唯一的，不能够重复使用。
+    parameterType属性指明查询时使用的参数类型，resultType属性指明查询返回的结果集类型-->
+    <!-- useGeneratedKeys:(仅 对 insert 有用) 告诉 MyBatis 使 用 JDBC 的getGeneratedKeys
+      方法来取出由数据（比如：像 MySQL 和 SQLServer 这样的数据库管理系统的自动递增字段）内部生成的主键。默认值： false。 -->
+    <!--keyProperty:(仅对 insert有用)标记一个属性， MyBatis 会通过 getGeneratedKeys或者通过 insert 语句的 selectKey 子元素设置它的值。默认：不设置。 -->
+    <!--#{}中的内容，为占位符，当参数为某个JavaBean时，表示放置该Bean对象的属性值  -->
+
+    <!-- 将以下ID改为接口中的方法名-->
+    <!--查询-->
+    <select id="getCustomerById" parameterType="int" resultType="Customer">
+        select * from customer where id = #{id}
+    </select>
+
+    <select id="selectByNamePwd"  parameterType="String" resultType="Customer">
+        select * from customer where custname = #{arg0} and pwd = #{arg1}
+    </select>
+
+    <!-- 查询2-->
+    <select id="selectAll" resultMap="customerMap">
+        select * from customer
+    </select>
+
+    <!-- 查询3-->
+    <select id="select" resultMap="customerMap">
+        select * from customer where age = #{strWhere}
+    </select>
+
+    <!--插入-->
+    <insert id="add" parameterType="cn.edu.usts.cs2018.entity.Customer" keyProperty="id">
+        insert into customer(custname, pwd, age, address)
+            value (#{custname},#{pwd},#{age},#{address})
+    </insert>
+
+    <!--更新-->
+    <update id="update" parameterType="cn.edu.usts.cs2018.entity.Customer">
+        update customer
+        set custname=#{custname},pwd=#{pwd},age=#{age},address=#{address}
+        where id=#{id}
+    </update>
+
+    <!-- 删除-->
+    <delete id="deleteById">
+        delete from customer where id=#{id}
+    </delete>
+
+    <!--动态SQL用法示例-->
+    <select id="searchCustomer"  parameterType="String" resultMap="customerMap">
+        SELECT * FROM customer WHERE 1=1
+        <!--         1.　if的用法 -->
+        <!--                AND  custname LIKE '%' #{custname} '%'-->
+        <!--
+                    <if test="custname != null and custname!=''">
+                            AND  custname LIKE  concat('%', #{custname}, '%')
+                    </if>
+                    <if test="address != null and address!=''">
+                          AND  address LIKE '%' #{address} '%'
+                    </if>
+                    <if test="address > 0">
+                          AND  age =#{address}
+                    </if>
+        -->
+        <!-- 2 choose 用法-->
+        <choose>
+            <when test="custname != null and custname!=''">
+                AND  custname LIKE  concat('%', #{custname}, '%')
+            </when>
+            <when test="custname != null and custname!=''">
+                AND  custname LIKE  concat('%', #{custname}, '%')
+            </when>
+            <otherwise >
+                AND  address  is not null
+            </otherwise>
+        </choose>
+
+    </select>
+</mapper>
